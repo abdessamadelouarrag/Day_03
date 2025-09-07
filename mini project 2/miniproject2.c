@@ -175,7 +175,7 @@ void modifieruncontact(){
     
                 printf("le contact a trouve de nom %s: \n", contacts[i].nom);
     
-                printf("bghiti tbdl smiya (Y/N) : \n");
+                printf("voulez-vous changer le nom (Y = yes /N = no) : \n");
                 scanf(" %c",&yn);
     
                 if (yn == 'y' || yn == 'Y')
@@ -184,7 +184,7 @@ void modifieruncontact(){
                     scanf(" %[^\n]", contacts[i].nom);
                 }
     
-                printf("bghiti tbdl numero d tele (Y/N) : \n");
+                printf("voulez-vous changer numero de telephone (Y = yes /N = no) : \n");
                 scanf(" %c",&yn);
                 getchar();
     
@@ -194,7 +194,7 @@ void modifieruncontact(){
                     scanf(" %[^\n]", contacts[i].numerodetelephone);
                 }
                 
-                printf("bghiti tbdl email (Y/N) :\n");
+                printf("voulez-vous changer l\'email (Y = yes /N = no) :\n");
                 scanf(" %c", &yn);
                 getchar();
     
@@ -229,7 +229,7 @@ int exitprgrame(){
 
     char exitp;
 
-    printf("bssah tkhrj mn programe !? (N/Y) : \n");
+    printf("Voulez-vous quitter le programme ? (N = no /Y = yes)  : \n");
     scanf(" %c", &exitp);
     getchar();
 
@@ -242,7 +242,7 @@ int exitprgrame(){
     }
     else
     {
-        printf("continue le programe \n");
+        printf("continue le programe ... \n");
         return 1;
     }
 }
