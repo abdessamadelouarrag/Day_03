@@ -1,2 +1,0 @@
-scanf(" %[^\n]", nvcnt);
-        getchar();

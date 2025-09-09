@@ -314,6 +314,31 @@ void supprimeruncontact(){
     }
 }
 
+// tri par ordre alphabe (a-z)
+
+void triParOder(){
+
+    char temp[100];
+
+    for (int i = 0; i < nombredecontacts ; i++)
+    {
+        for (int j = 0; j < nombredecontacts - 1; j++)
+        {
+            if (strcmp(contacts[j].nom,contacts[j + 1].nom) > 0)
+            {
+                strcpy(temp,contacts[j].nom);
+                strcpy(contacts[j].nom,contacts[j+1].nom);
+                strcpy(contacts[j+1].nom,temp);
+            }
+        }
+    }
+    printf("====== T R I  P A R  O R D E R ======\n");
+    for (int i = 0; i < nombredecontacts; i++)
+    {
+        printf("info de name %d : %s\nnumero de telephone : %s\nemail : %s\n", i+1, contacts[i].nom,contacts[i].numerodetelephone,contacts[i].email);
+    }
+    
+}
 // main et (menu)
 
 int main(){
@@ -332,6 +357,7 @@ int main(){
         printf("3. recherche un contact \n");
         printf("4. modifier un contact \n");
         printf("5. supprimer un contact\n");
+        printf("6. tri par order (a - z)\n");
         printf("0. exit \n");
         printf("==> Entrer votre choix : ");
         scanf("%d", &choix);
@@ -359,6 +385,9 @@ int main(){
             break;
         case 5://pour supprimer un contact
             supprimeruncontact();
+            break;
+        case 6:
+            triParOder();
             break;
         default:
             clearscreen();
